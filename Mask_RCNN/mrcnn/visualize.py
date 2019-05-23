@@ -167,16 +167,15 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             ax.add_patch(p)
     ax.imshow(masked_image.astype(np.uint8))
     if auto_show:
-            # plt.show()
-            millis = int(round(time.time() * 1000))
-            # Root directory of the project
-            root_dir = os.path.abspath("../")
-            result_dir = root_dir + '/results/'
-            img_path = result_dir + str(millis) + '.png'
-            print(f"saved at {img_path}")
-            plt.savefig(img_path, bbox_inches='tight')
-            plt.close()
-
+        # plt.show()
+        millis = int(round(time.time() * 1000))
+        # Root directory of the project
+        root_dir = os.path.abspath("../")
+        result_dir = root_dir + '/results/'
+        img_path = result_dir + str(millis) + '.png'
+        print(f"saved at {img_path}")
+        plt.savefig(img_path, bbox_inches='tight')
+        plt.close()
 
 
 def display_differences(image,
