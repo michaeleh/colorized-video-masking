@@ -1,11 +1,12 @@
+import os
+
 from Framer.video2frames import extract_frames
 from Mask_RCNN.api.img_detector import Detector
-# from video path
-movie_path = "C:/michael/work/Practice/Drone/RGB/jog.mp4"
-frames = extract_frames(movie_path, max_frames=20)
 
+# from video path
+base_dir = "C:/michael/work/Practice/Drone/RGB/"
+paths = os.listdir(base_dir)
+frames = [extract_frames(base_dir + movie_path, max_frames=5) for movie_path in paths]
 # mask frames
 detector = Detector()
 detector.detect_images(frames)
-
-
