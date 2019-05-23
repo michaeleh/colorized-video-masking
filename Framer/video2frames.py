@@ -3,7 +3,7 @@ import os
 import cv2
 
 
-def extract_frames(movie_path, max_frames=None, rotate_angle=0):
+def extract_frames(movie_path, max_frames=None, rotate_angle=0, use_grayscale=False):
     if not os.path.exists(movie_path):
         print("Input video file is not found")
         return 1
@@ -43,6 +43,9 @@ def extract_frames(movie_path, max_frames=None, rotate_angle=0):
                     frame = cv2.transpose(frame)
                     frame = cv2.flip(frame, 0)
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            if use_grayscale:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
             frames.append(frame)
         frame_id += int(1 + skip_delta)
         cap.set(cv2.CAP_PROP_POS_FRAMES, frame_id)

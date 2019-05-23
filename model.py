@@ -7,7 +7,7 @@ from Mask_RCNN.api.img_detector import Detector
 base_dir = "C:/michael/work/Practice/Drone/RGB/"
 paths = os.listdir(base_dir)
 for movie_path in paths:
-    frames = extract_frames(base_dir + movie_path, max_frames=5)
+    frames = extract_frames(base_dir + movie_path, max_frames=5, use_grayscale=True)
     # mask frames
     detector = Detector()
     detector.detect_images(frames)
