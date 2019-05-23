@@ -39,7 +39,7 @@ class RCNN:
     def detect_and_save(self, images):
         results = self.model.detect(images, verbose=0)
         # Visualize results
-        r = results[0]
         for img in images:
+            r = results.pop()
             visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
                                         class_names, r['scores'])
