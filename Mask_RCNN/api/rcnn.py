@@ -1,11 +1,11 @@
 import os
 import sys
-import skimage.io
-from Mask_RCNN.mrcnn import utils
+
 import Mask_RCNN.mrcnn.model as modellib
-from Mask_RCNN.mrcnn import visualize
 from Mask_RCNN.api.class_config import class_names
 from Mask_RCNN.api.model_config import config
+from Mask_RCNN.mrcnn import utils
+from Mask_RCNN.mrcnn import visualize
 
 """
 
@@ -18,7 +18,7 @@ class RCNN:
 
     def __init__(self) -> None:
         # Root directory of the project
-        root_dir = os.path.abspath("../")
+        root_dir = os.path.abspath("./Mask_RCNN")
         # Import Mask RCNN
         sys.path.append(root_dir)  # To find local version of the library
         # Import COCO config
@@ -36,10 +36,10 @@ class RCNN:
         # Load weights trained on MS-COCO
         self.model.load_weights(coco_model_path, by_name=True)
 
-    def detect_and_save(self, img_path):
-        image = skimage.io.imread(img_path)
-        results = self.model.detect([image], verbose=0)
+    def detect_and_save(self, images):
+        results = self.model.detect(images, verbose=0)
         # Visualize results
         r = results[0]
-        visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
-                                    class_names, r['scores'])
+        for img in images:
+            visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
+                                        class_names, r['scores'])

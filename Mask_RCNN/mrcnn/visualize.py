@@ -25,7 +25,7 @@ ROOT_DIR = os.path.abspath("../")
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
-from mrcnn import utils
+from Mask_RCNN.mrcnn import utils
 
 
 ############################################################
@@ -170,7 +170,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
         # plt.show()
         millis = int(round(time.time() * 1000))
         # Root directory of the project
-        root_dir = os.path.abspath("../")
+        root_dir = os.path.abspath("./Mask_RCNN")
         result_dir = root_dir + '/results/'
         img_path = result_dir + str(millis) + '.png'
         print(f"saved at {img_path}")
