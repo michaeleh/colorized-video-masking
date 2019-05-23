@@ -29,7 +29,7 @@ def main(args):
         parser.error("Failed to open input video")
         return 1
 
-    frameCount = cap.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT)
+    frameCount = cap.get(cv2.CAP_PROP_FRAME_COUNT)
 
     if args.verbose:
         print(frameCount)
@@ -90,7 +90,7 @@ def main(args):
             continue
 
         frameId += int(1 + skipDelta)
-        cap.set(cv2.cv.CV_CAP_PROP_POS_FRAMES, frameId)
+        cap.set(cv2.CAP_PROP_POS_FRAMES, frameId)
 
     if exif_model:
         fields = ['Model', 'Make', 'FocalLength']
