@@ -40,6 +40,6 @@ class RCNN:
         results = self.model.detect(images, verbose=0)
         # Visualize results
         for img in images:
-            r = results.pop(index=0)
+            r = results.pop(0)
             visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
                                         class_names, r['scores'])
