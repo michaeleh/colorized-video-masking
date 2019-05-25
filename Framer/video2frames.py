@@ -50,6 +50,7 @@ def extract_frames(movie_path, max_frames=None, rotate_angle=0, use_grayscale=Fa
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
             frames.append(frame)
+            print(f"added frame {frame_id}/{frame_count}")
         frame_id += int(1 + skip_delta)
         cap.set(cv2.CAP_PROP_POS_FRAMES, frame_id)
 

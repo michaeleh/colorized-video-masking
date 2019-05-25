@@ -3,6 +3,7 @@ import sys
 
 import Mask_RCNN.mrcnn.model as modellib
 from Mask_RCNN.api.class_config import class_names
+from Mask_RCNN.api.class_config import color_labels
 from Mask_RCNN.api.model_config import config
 from Mask_RCNN.mrcnn import utils
 from Mask_RCNN.mrcnn import visualize
@@ -15,7 +16,6 @@ INIT MODEL CONFIGS AND LOAD TO MEMORY
 
 
 class RCNN:
-
     def __init__(self) -> None:
         # Root directory of the project
         root_dir = os.path.abspath("./Mask_RCNN")
@@ -42,4 +42,4 @@ class RCNN:
         for img in images:
             r = results.pop(0)
             visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
-                                        class_names, r['scores'])
+                                        class_names, r['scores'], colors=color_labels)

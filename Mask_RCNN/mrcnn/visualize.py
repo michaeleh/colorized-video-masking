@@ -125,7 +125,10 @@ def display_instances(image, boxes, masks, class_ids, class_names,
 
     masked_image = image.astype(np.uint32).copy()
     for i in range(N):
-        color = colors[i]
+        label = class_names[class_ids[i]]
+        if label not in colors:
+            continue
+        color = colors[label]
 
         # Bounding box
         if not np.any(boxes[i]):
