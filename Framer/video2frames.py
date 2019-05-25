@@ -42,9 +42,12 @@ def extract_frames(movie_path, max_frames=None, rotate_angle=0, use_grayscale=Fa
                 elif rotate_angle == 270:
                     frame = cv2.transpose(frame)
                     frame = cv2.flip(frame, 0)
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
             if use_grayscale:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            else:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
             frames.append(frame)
         frame_id += int(1 + skip_delta)
