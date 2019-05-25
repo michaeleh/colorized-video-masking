@@ -9,7 +9,7 @@ paths = os.listdir(base_dir)
 for movie_path in paths:
     # mask frames
     detector = Detector()
-    frames = extract_frames(base_dir + movie_path, max_frames=10, use_grayscale=False)
+    frames = extract_frames(base_dir + movie_path, use_grayscale=False)
     detector.detect_images(frames)
-    frames = extract_frames(base_dir + movie_path, max_frames=10, use_grayscale=True)
+    frames = extract_frames(base_dir + movie_path, use_grayscale=True)
     detector.detect_images(frames)
