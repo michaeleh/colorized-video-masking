@@ -1,0 +1,9 @@
+tensorflow
+# setup gpu as in https://www.tensorflow.org/install/gpu#windows_setup
+opencv-python
+scikit-image
+scipy
+git+https://github.com/aleju/imgaug --no-deps
+# Microsoft Visual C++ 14.0 is required.
+git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI
+matplotlib
