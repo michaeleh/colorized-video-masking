@@ -24,7 +24,7 @@ def init_labels_color():
     color_labels_dict = {}
     # you can group labels to the same color --- labels = ['person',['car','bus'],['hair drier','teddy bear']]
 
-    labels = ['person', 'car']
+    labels = ['car']
     colors = random_colors(len(labels))
 
     for index in range(0, len(labels)):
