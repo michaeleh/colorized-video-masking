@@ -1,7 +1,7 @@
 # Object Masking in a ( RGB, B&W and recolorized) Video
 
 ## the pipeline:
-* using tensorflow framework and opencv for video manipulations
+* using tensorflow framework and opencv for video manipulations and Python 3.6.8
 1. extract frames from the video
 2. convert them to black and white [optional]
 3. recolor the frames using transfer learning on VGG16
