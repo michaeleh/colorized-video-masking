@@ -37,6 +37,7 @@ if __name__ == '__main__':
     # from video path
     movie_path = "./Drone/drone.mp4"
     detector = Detector()
+    # models to use
     models = [RgbModel(detector), BnWModel(detector), RecolorModel(detector)]
     for model in models:
         model.run()
