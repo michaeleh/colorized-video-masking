@@ -29,5 +29,5 @@ python model.py ./myVideo.mp4
 coming soon
 
 ## Thank You
-1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a><br/>
-2.<a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
+1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a>
+2. <a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
