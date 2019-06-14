@@ -1,6 +1,6 @@
 # Object Masking in a ( RGB, B&W and recolorized) Video
 
-## the pipeline:
+## The Pipeline:
 * using tensorflow framework and opencv for video manipulations and Python 3.6.8
 1. extract frames from the video
 2. convert them to black and white [optional]
@@ -31,6 +31,7 @@ for this demo i only wanted to look for:
 * you can have much more <a href="https://github.com/michaeleh/live-colorized-rcnn/blob/master/Mask_RCNN/api/class_config.py">labels<a/>
 ### RGB
 <img src="https://media.giphy.com/media/fUGxDnnnMGBVbzjkwM/giphy.gif"/>
+    
 ## Thank You
 1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a>
 2. <a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
