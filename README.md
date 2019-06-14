@@ -25,7 +25,7 @@ python model.py ./myVideo.mp4
 [] run model on a live video with minimal latency
 [] ???
 
-# Demo
+## Demo
 coming soon
 
 ## Thank You
