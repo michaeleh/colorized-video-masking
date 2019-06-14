@@ -4,6 +4,14 @@ import cv2
 
 
 def extract_frames(movie_path, max_frames=None, rotate_angle=0, use_grayscale=False):
+    """
+    From Movie Path return frames
+    :param movie_path: movie path
+    :param max_frames: max frames to extract, in practice we take MIN(max_frames > accusal frame)
+    :param rotate_angle: should we rotate the frame 90,180 or 270 degrees
+    :param use_grayscale: transfrom frame to black and white but keep 3 channels!
+    :return: list of frames
+    """
     if not os.path.exists(movie_path):
         print("Input video file is not found")
         return 1

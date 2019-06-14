@@ -10,6 +10,11 @@ from skimage.transform import resize
 
 
 def load_image(img):
+    """
+    Preprocessed the image
+    :param img: to crop
+    :return: cropped image
+    """
     # crop image from center
     short_edge = min(img.shape[:2])
     yy = int((img.shape[0] - short_edge) / 2)
@@ -21,15 +26,22 @@ def load_image(img):
     return (img[:, :, 0] + img[:, :, 1] + img[:, :, 2]) / 3.0
 
 
-# return img
-
 def model():
+    """
+    reading tensorflow model
+    :return: model
+    """
     with open("Colorize/model/colorize.tfmodel", mode='rb') as f:
         model = f.read()
     return model
 
 
 def recolor(imgs):
+    """
+    Recolor black and white image with tre model
+    :param imgs: list of image to recolor
+    :return: list of input images but now with color
+    """
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(model())
     grayscale = tf.placeholder(tf.float32, [1, 224, 224, 1])

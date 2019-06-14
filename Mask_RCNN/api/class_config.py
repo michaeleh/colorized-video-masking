@@ -21,10 +21,16 @@ class_names = ['BG', 'person', 'bicycle', 'car', 'motorcycle', 'airplane',
 
 
 def init_labels_color():
+    """
+    get only the labels you want, you can group labels such as each GROUP gets a different color.
+    you can group labels to the same color --- labels = ['person',['car','bus'],['hair drier','teddy bear']]
+    :return: label to color dictionary
+    """
     color_labels_dict = {}
-    # you can group labels to the same color --- labels = ['person',['car','bus'],['hair drier','teddy bear']]
 
-    labels = ['car']
+    labels = [['person', 'bicycle'], ['car', 'motorcycle',
+                                      'bus', 'train', 'truck'], ['traffic light',
+                                                                 'stop sign']]
     colors = random_colors(len(labels))
 
     for index in range(0, len(labels)):
@@ -37,5 +43,6 @@ def init_labels_color():
             color_labels_dict[label] = colors[index]
 
     return color_labels_dict
+
 
 color_labels = init_labels_color()

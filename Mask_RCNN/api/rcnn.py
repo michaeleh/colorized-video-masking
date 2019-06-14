@@ -1,6 +1,8 @@
 import os
 import sys
 
+import cv2
+
 import Mask_RCNN.mrcnn.model as modellib
 from Mask_RCNN.api.class_config import class_names
 from Mask_RCNN.api.class_config import color_labels
@@ -35,11 +37,20 @@ class RCNN:
         self.model = modellib.MaskRCNN(mode="inference", model_dir=model_dir, config=config)
         # Load weights trained on MS-COCO
         self.model.load_weights(coco_model_path, by_name=True)
+        self.frames = []
 
-    def detect_and_save(self, images):
+    def detect(self, images, save=False):
+        """
+        Detecting images
+        :param images: images loaded to memory
+        :param save: if should save or collect to self.frames
+        """
         results = self.model.detect(images, verbose=0)
         # Visualize results
         for img in images:
             r = results.pop(0)
-            visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
-                                        class_names, r['scores'], colors=color_labels)
+            path = visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'],
+                                               class_names, r['scores'], colors=color_labels)
+            if not save:
+                self.frames.append(cv2.imread(path))
+                os.remove(path)

@@ -176,9 +176,9 @@ def display_instances(image, boxes, masks, class_ids, class_names,
         root_dir = os.path.abspath("./Mask_RCNN")
         result_dir = root_dir + '/results/'
         img_path = result_dir + str(millis) + '.png'
-        print(f"saved at {img_path}")
         plt.savefig(img_path, bbox_inches='tight')
         plt.close()
+        return img_path
 
 
 def display_differences(image,
