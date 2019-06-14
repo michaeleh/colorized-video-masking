@@ -8,7 +8,7 @@
 4. run object masking with Mask RCNN
 5. collect the frames to a video
 
-<img src="https://imgur.com/w0rgKV9"/>
+<img src="https://i.imgur.com/w0rgKV9.png"/>
 
 ## How To Use
 1. model.py -- the main. specify the models to use. run it with video path as an argument
