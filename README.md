@@ -21,6 +21,8 @@ python model.py ./myVideo.mp4
     NOTE: some requirement can't be installed with pip alone. there are comments in this file read them!
 
 ## Futue Work and How You Can Contribute!
+[] better model for colorization, as vgg16 accept low resolution images
+[] faster detection algorithm to support live stection, maybe mot masking only detection
 [] improve preformance without scaling the GPU
 [] run model on a live video with minimal latency
 [] ???
@@ -35,8 +37,12 @@ for this demo i only wanted to look for:
 
 ### Black and White
 <img src="https://media.giphy.com/media/JO3wCbZ0JkjhLjwca2/giphy.gif"/>
+
+## Recolored
+<img src="https://media.giphy.com/media/lSfwCGI8YSCPfFauEb/giphy.gif/>
     
     
 ## Thank You
 1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a>
 2. <a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
+3. <a href="https://youtu.be/f7TLW6qeX4M">Video for demo (0:25 ~ 0:35)</a>
