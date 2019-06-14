@@ -16,6 +16,7 @@ def to_vid(frames, video_name):
     video = cv2.VideoWriter(video_name, fourcc, 30, (width, height))
     i = 0
     for frame in frames:
+        frame = cv2.resize(frame, (width,height))
         print(f"{i}/{len(frames)}")
         i += 1
         video.write(frame)
@@ -32,5 +33,7 @@ def to_vid_from_dir(dir_name):
     image_folder = f'../Mask_RCNN/results/{dir_name}'
 
     images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
-    frames = [cv2.imread(os.path.join(image_folder, image) for image in images)]
+    frames = [cv2.imread(os.path.join(image_folder, image)) for image in images]
     to_vid(frames, dir_name)
+
+
