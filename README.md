@@ -23,11 +23,11 @@ python model.py ./myVideo.mp4
     NOTE: some requirement can't be installed with pip alone. there are comments in this file read them!
 
 ## Futue Work and How You Can Contribute!
-[] better model for colorization, as vgg16 accept low resolution images
-[] faster detection algorithm to support live stection, maybe mot masking only detection
-[] improve preformance without scaling the GPU
-[] run model on a live video with minimal latency
-[] ???
+[ ] better model for colorization, as vgg16 accept low resolution images
+[ ] faster detection algorithm to support live stection, maybe mot masking only detection
+[ ] improve preformance without scaling the GPU
+[ ] run model on a live video with minimal latency
+[ ] ???
 
 ## Demo
 for this demo i only wanted to look for:
