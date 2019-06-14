@@ -39,7 +39,7 @@ for this demo i only wanted to look for:
 <img src="https://media.giphy.com/media/JO3wCbZ0JkjhLjwca2/giphy.gif"/>
 
 ## Recolored
-<img src="https://media.giphy.com/media/lSfwCGI8YSCPfFauEb/giphy.gif/">
+<img src="https://media.giphy.com/media/lSfwCGI8YSCPfFauEb/giphy.gif"/>
     
     
 ## Thank You
