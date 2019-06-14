@@ -1,5 +1,5 @@
 # Object Masking in a ( RGB, B&W and recolorized) Video
-
+<a href="https://link.medium.com/MTAFNwVRvX">Medium Post</a>
 ## The Pipeline:
 * using tensorflow framework and opencv for video manipulations and Python 3.6.8
 1. extract frames from the video
