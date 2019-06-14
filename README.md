@@ -16,7 +16,7 @@ python model.py ./myVideo.mp4
 
 2. Colorize -- directory for recolor black and white models
 3. Framer -- directory to convert frames to video and vice versa
-4. Mask_RCNN -- directory to
+4. Mask_RCNN -- directory of Mask RCNN model and code
 5. requirements.txt -- requirement for this project.
     NOTE: some requirement can't be installed with pip alone. there are comments in this file read them!
 
@@ -29,5 +29,5 @@ python model.py ./myVideo.mp4
 coming soon
 
 ## Thank You
-1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a>
+1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a><br/>
 2.<a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
