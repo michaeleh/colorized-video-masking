@@ -29,6 +29,8 @@ python model.py ./myVideo.mp4
 for this demo i only wanted to look for:
 * person, bicycle, car, motorcycle, bus, train, truck, traffic light, stop sign
 * you can have much more <a href="https://github.com/michaeleh/live-colorized-rcnn/blob/master/Mask_RCNN/api/class_config.py">labels<a/>
+### RGB
+<img src="https://media.giphy.com/media/fUGxDnnnMGBVbzjkwM/giphy.gif"/>
 ## Thank You
 1. <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN model</a>
 2. <a href="https://github.com/sksq96/cnn-colorize">Colorize Model</a>
