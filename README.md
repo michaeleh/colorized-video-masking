@@ -32,8 +32,9 @@ for this demo i only wanted to look for:
     
 ### RGB
 <img src="https://media.giphy.com/media/fUGxDnnnMGBVbzjkwM/giphy.gif"/>
+
 ### Black and White
- <img src="https://media.giphy.com/media/JO3wCbZ0JkjhLjwca2/giphy.gif"/>
+<img src="https://media.giphy.com/media/JO3wCbZ0JkjhLjwca2/giphy.gif"/>
     
     
 ## Thank You
